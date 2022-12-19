@@ -1,4 +1,4 @@
-package com.lovemesomecoding.graphql;
+package com.folautech.springbootgraphql;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
