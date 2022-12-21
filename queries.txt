@@ -1,0 +1,27 @@
+
+# get all chats
+query{
+  allChats {
+    id
+    uuid
+    title
+    messages {
+      id
+      uuid
+      message
+    }
+  }
+}
+
+# get messages by chat id
+query {
+  getMessagesByChatId(id: 1){
+    id
+    message
+    user{
+      id
+      firstName
+      lastName
+    }
+  }
+}
