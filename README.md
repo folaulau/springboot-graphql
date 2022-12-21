@@ -1,3 +1,8 @@
+
+
+### UI
+http://localhost:8080/graphiql?path=/graphql
+
 ### Helpful Resources
 #### Official Documentation
 https://spring.io/projects/spring-graphql#overview
