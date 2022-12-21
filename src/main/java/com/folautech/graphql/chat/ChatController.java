@@ -31,11 +31,13 @@ public class ChatController {
 
     @SchemaMapping(typeName = "Query",value = "allChats")
     public List<Chat> getAllChats() {
+        log.info("getAllChats");
         return chatRepository.findAll();
     }
 
     @SchemaMapping(typeName = "Query",value = "getMessagesByChatId")
     public List<Message> getMessagesByChatId(@Argument Long id) {
+        log.info("getMessagesByChatId, id={}",id);
         return messageRepository.findByChatId(id);
     }
 
