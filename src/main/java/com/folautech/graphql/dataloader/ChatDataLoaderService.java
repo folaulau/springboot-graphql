@@ -26,7 +26,7 @@ public class ChatDataLoaderService {
 
         // load messages
         for (int i=1;i<=20;i++){
-            Message message = Message.builder().build();
+            Message message = new Message();
             message.setMessage("say this asdf"+RandomGeneratorUtils.getIntegerWithin(100,999999));
             message.setUser(User.builder()
                     .id(Long.valueOf(""+RandomGeneratorUtils.getIntegerWithin(1,3)))

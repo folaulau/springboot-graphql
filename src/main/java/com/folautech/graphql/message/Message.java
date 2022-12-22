@@ -9,10 +9,8 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.annotations.*;
 
@@ -22,6 +20,7 @@ import java.util.UUID;
 
 @Builder
 @Data
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
@@ -43,9 +42,11 @@ public class Message implements Serializable {
     private String uuid;
 
 //    @Lob
+    @NonNull
     @Column(name = "message")
     private String message;
 
+    @NonNull
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
     private User user;

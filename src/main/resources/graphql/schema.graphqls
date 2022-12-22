@@ -33,3 +33,7 @@ type Query {
   allChats: [Chat]
   getMessagesByChatId(id: ID!): [Message]
 }
+
+type Subscription {
+    getMessagesForChat: Message
+}
